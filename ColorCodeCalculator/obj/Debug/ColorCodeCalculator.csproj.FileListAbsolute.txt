@@ -1,0 +1,6 @@
+C:\Users\User\source\ElectronicCodeCalculator\ColorCodeCalculator\obj\Debug\ColorCodeCalculator.csprojResolveAssemblyReference.cache
+C:\Users\User\source\ElectronicCodeCalculator\ColorCodeCalculator\obj\Debug\ColorCodeCalculator.csproj.CoreCompileInputs.cache
+C:\Users\User\source\ElectronicCodeCalculator\ColorCodeCalculator\bin\Debug\ColorCodeCalculator.dll
+C:\Users\User\source\ElectronicCodeCalculator\ColorCodeCalculator\bin\Debug\ColorCodeCalculator.pdb
+C:\Users\User\source\ElectronicCodeCalculator\ColorCodeCalculator\obj\Debug\ColorCodeCalculator.dll
+C:\Users\User\source\ElectronicCodeCalculator\ColorCodeCalculator\obj\Debug\ColorCodeCalculator.pdb

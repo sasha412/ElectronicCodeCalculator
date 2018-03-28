@@ -1,0 +1,62 @@
+﻿@model WebResistanceCalculator.Models.ColorSelectOnLoad
+
+
+<h1>Resistance Calculator</h1>
+<hr />
+<h4 style="text-align: justify;">A convenient tool to find resistor color code values and calculate resistance in ohms</h4>
+
+<div class="Container">
+    <!--Resistor figure-->
+    <div class="resistor">
+            <div class="left"></div>
+            <div id="divBandFirst" class="band"></div>          
+            <div id="divBandSecond" class="band"></div>           
+            <div id="divBandThird" class="band"></div>            
+            <div id="divBandFourth" class="band"></div>           
+            <div class="right"></div>
+    </div>
+    <!--Color Selectors-->
+    <div class="drpClass">
+        <div>
+            @Html.Label("BandA", "1st Digit",htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.OhmLoad, new SelectList(Model.OhmLoad, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpFirstBand" })
+        </div>
+        <div>
+            @Html.Label("BandB", "2nd Digit", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.OhmLoad, new SelectList(Model.OhmLoad, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpSecondBand" })
+        </div>
+        <div>
+            @Html.Label("BandC", "Multiplier", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.MultiplierLoad, new SelectList(Model.MultiplierLoad, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpThirdBand" })
+        </div>
+        <div>
+            @Html.Label("BandD", "Tolerance", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.ToleranceLoad, new SelectList(Model.ToleranceLoad, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpFourthBand" })
+        </div>
+    </div>
+    <div id="divError"></div>
+    <div id="divResult" class="resultClass">
+        <!--Resistance Values-->
+        <div>
+            <div>
+                @Html.Label("lblMininumResistance", "Minimum Resistance")
+            </div>
+            <div>
+                @Html.TextBox("txtMinimumResistance", "0", htmlAttributes: new { @class = "form-control" }) Ohms
+            </div>
+        </div>
+        <div>           
+            <div>
+                @Html.Label("lblMaximumResistance", "Maximum Resistance")
+            </div>
+            <div>
+                @Html.TextBox("txtMaximumResistance", "0", htmlAttributes: new { @class = "form-control"}) Ohms
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/CustomUnit/ColorCodeCalculator.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
