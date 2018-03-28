@@ -21,3 +21,4 @@ The electronic color code (http://en.wikipedia.org/wiki/Electronic_color_code) i
 
 4. Developed a mobile first repsonsive view using JavaScript, CSS3, & HTML5.
 
+Please view the screenshots included in the repository!
