@@ -7,6 +7,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebResistanceCalculator;
 using WebResistanceCalculator.Controllers;
 using ColorCodeCalculator;
+using Newtonsoft.Json.Linq;
+using System.Web.Script.Serialization;
 
 namespace WebResistanceCalculator.Tests.Controllers
 {
@@ -86,6 +88,25 @@ namespace WebResistanceCalculator.Tests.Controllers
 
             //Assert
             Assert.AreEqual("10.1", result.MaximumResistance);
+        }
+
+        [TestMethod]
+        public void TestArgumentNullException()
+        {
+            //Arrange
+            HomeController hController = new HomeController();
+
+            //Act
+            JsonResult result = (JsonResult)hController.getResistanceValue(null,null,null,null);
+            //convrt JSON to string
+            string stringResult = new JavaScriptSerializer().Serialize(result.Data);
+            //parse json string
+            JObject joResponse = JObject.Parse(stringResult);
+            //get error
+            string error = (string)joResponse["error"];
+
+            //Assert
+            Assert.AreEqual("Exception ocurred while calculating resistance value: Value cannot be null.\r\nParameter name: key", error);
         }
 
     }
