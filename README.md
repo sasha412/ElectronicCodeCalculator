@@ -2,6 +2,7 @@
 The electronic color code (http://en.wikipedia.org/wiki/Electronic_color_code) is used to indicate the values or ratings of electronic components, very commonly for resistors. 
 
 1. Wrote a class that implements the following interface. 
+      
       public interface IOhmValueCalculator
       {
          /// <summary>
