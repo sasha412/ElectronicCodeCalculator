@@ -98,7 +98,7 @@ namespace WebResistanceCalculator.Tests.Controllers
 
             //Act
             JsonResult result = (JsonResult)hController.getResistanceValue(null,null,null,null);
-            //convrt JSON to string
+            //convert JSON to string
             string stringResult = new JavaScriptSerializer().Serialize(result.Data);
             //parse json string
             JObject joResponse = JObject.Parse(stringResult);

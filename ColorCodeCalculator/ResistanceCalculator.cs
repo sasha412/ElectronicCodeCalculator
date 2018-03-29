@@ -9,7 +9,7 @@ namespace ColorCodeCalculator
     public class ResistanceCalculator : IOhmValueCalculator
     {
         /// <summary>
-        /// Calculates the Ohm value ( upper bound tolerance) of a resistor based on the band colors.
+        /// Calculates the minimum and maximum Ohm values of a resistor based on the band colors.
         /// </summary>
         /// <param name="bandAColor">The color of the first figure of component value band.</param>
         /// <param name="bandBColor">The color of the second significant figure band.</param>
@@ -44,7 +44,7 @@ namespace ColorCodeCalculator
         /// Used to format large resistance values
         /// </summary>
         /// <param name="num"> resistance value </param>
-        /// <returns>frmatted string of a resistance value</returns>
+        /// <returns>formatted string of a resistance value</returns>
         public string FormatResistance(double num)
         {
             //to show in Mega format 
