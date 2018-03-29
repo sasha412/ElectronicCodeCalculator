@@ -19,6 +19,6 @@ The electronic color code (http://en.wikipedia.org/wiki/Electronic_color_code) i
 
 3. Created a .NET MVC web interface that will allow someone to use the calculator I created in step one.
 
-4. Developed a mobile first repsonsive view using JavaScript, CSS3, & HTML5.
+4. Developed a mobile first repsonsive view using JavaScript, AJAX, jQuery, Bootstrap, CSS3, & HTML5.
 
 Please view the screenshots included in the repository!
